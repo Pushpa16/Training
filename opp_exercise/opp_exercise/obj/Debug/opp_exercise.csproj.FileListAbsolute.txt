@@ -1,0 +1,7 @@
+C:\Users\pushpa.gond\source\repos\opp_exercise\opp_exercise\bin\Debug\opp_exercise.exe.config
+C:\Users\pushpa.gond\source\repos\opp_exercise\opp_exercise\bin\Debug\opp_exercise.exe
+C:\Users\pushpa.gond\source\repos\opp_exercise\opp_exercise\bin\Debug\opp_exercise.pdb
+C:\Users\pushpa.gond\source\repos\opp_exercise\opp_exercise\obj\Debug\opp_exercise.csproj.AssemblyReference.cache
+C:\Users\pushpa.gond\source\repos\opp_exercise\opp_exercise\obj\Debug\opp_exercise.csproj.CoreCompileInputs.cache
+C:\Users\pushpa.gond\source\repos\opp_exercise\opp_exercise\obj\Debug\opp_exercise.exe
+C:\Users\pushpa.gond\source\repos\opp_exercise\opp_exercise\obj\Debug\opp_exercise.pdb
