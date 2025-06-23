@@ -1,0 +1,7 @@
+C:\Users\pushpa.gond\source\repos\practice5\practice5\bin\Debug\practice5.exe.config
+C:\Users\pushpa.gond\source\repos\practice5\practice5\bin\Debug\practice5.exe
+C:\Users\pushpa.gond\source\repos\practice5\practice5\bin\Debug\practice5.pdb
+C:\Users\pushpa.gond\source\repos\practice5\practice5\obj\Debug\practice5.csproj.AssemblyReference.cache
+C:\Users\pushpa.gond\source\repos\practice5\practice5\obj\Debug\practice5.csproj.CoreCompileInputs.cache
+C:\Users\pushpa.gond\source\repos\practice5\practice5\obj\Debug\practice5.exe
+C:\Users\pushpa.gond\source\repos\practice5\practice5\obj\Debug\practice5.pdb
