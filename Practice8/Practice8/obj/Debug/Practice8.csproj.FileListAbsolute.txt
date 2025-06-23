@@ -1,0 +1,7 @@
+C:\Users\pushpa.gond\source\repos\Practice8\Practice8\obj\Debug\Practice8.csproj.AssemblyReference.cache
+C:\Users\pushpa.gond\source\repos\Practice8\Practice8\obj\Debug\Practice8.csproj.CoreCompileInputs.cache
+C:\Users\pushpa.gond\source\repos\Practice8\Practice8\bin\Debug\Practice8.exe.config
+C:\Users\pushpa.gond\source\repos\Practice8\Practice8\bin\Debug\Practice8.exe
+C:\Users\pushpa.gond\source\repos\Practice8\Practice8\bin\Debug\Practice8.pdb
+C:\Users\pushpa.gond\source\repos\Practice8\Practice8\obj\Debug\Practice8.exe
+C:\Users\pushpa.gond\source\repos\Practice8\Practice8\obj\Debug\Practice8.pdb

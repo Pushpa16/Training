@@ -1,0 +1,7 @@
+C:\Users\pushpa.gond\source\repos\Practice9\Practice9\bin\Debug\Practice9.exe.config
+C:\Users\pushpa.gond\source\repos\Practice9\Practice9\bin\Debug\Practice9.exe
+C:\Users\pushpa.gond\source\repos\Practice9\Practice9\bin\Debug\Practice9.pdb
+C:\Users\pushpa.gond\source\repos\Practice9\Practice9\obj\Debug\Practice9.csproj.AssemblyReference.cache
+C:\Users\pushpa.gond\source\repos\Practice9\Practice9\obj\Debug\Practice9.csproj.CoreCompileInputs.cache
+C:\Users\pushpa.gond\source\repos\Practice9\Practice9\obj\Debug\Practice9.exe
+C:\Users\pushpa.gond\source\repos\Practice9\Practice9\obj\Debug\Practice9.pdb
