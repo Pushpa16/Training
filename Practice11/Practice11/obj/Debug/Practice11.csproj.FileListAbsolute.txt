@@ -1,0 +1,7 @@
+C:\Users\pushpa.gond\source\repos\Practice11\Practice11\bin\Debug\Practice11.exe.config
+C:\Users\pushpa.gond\source\repos\Practice11\Practice11\bin\Debug\Practice11.exe
+C:\Users\pushpa.gond\source\repos\Practice11\Practice11\bin\Debug\Practice11.pdb
+C:\Users\pushpa.gond\source\repos\Practice11\Practice11\obj\Debug\Practice11.csproj.AssemblyReference.cache
+C:\Users\pushpa.gond\source\repos\Practice11\Practice11\obj\Debug\Practice11.csproj.CoreCompileInputs.cache
+C:\Users\pushpa.gond\source\repos\Practice11\Practice11\obj\Debug\Practice11.exe
+C:\Users\pushpa.gond\source\repos\Practice11\Practice11\obj\Debug\Practice11.pdb
