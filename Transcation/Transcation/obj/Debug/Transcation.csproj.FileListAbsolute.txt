@@ -1,0 +1,7 @@
+C:\Users\pushpa.gond\source\repos\Transcation\Transcation\obj\Debug\Transcation.csproj.AssemblyReference.cache
+C:\Users\pushpa.gond\source\repos\Transcation\Transcation\obj\Debug\Transcation.csproj.CoreCompileInputs.cache
+C:\Users\pushpa.gond\source\repos\Transcation\Transcation\bin\Debug\Transcation.exe.config
+C:\Users\pushpa.gond\source\repos\Transcation\Transcation\bin\Debug\Transcation.exe
+C:\Users\pushpa.gond\source\repos\Transcation\Transcation\bin\Debug\Transcation.pdb
+C:\Users\pushpa.gond\source\repos\Transcation\Transcation\obj\Debug\Transcation.exe
+C:\Users\pushpa.gond\source\repos\Transcation\Transcation\obj\Debug\Transcation.pdb

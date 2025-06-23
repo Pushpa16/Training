@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transcation1", "Transcation1\Transcation1.csproj", "{1CD1C0D9-2E86-4A9E-B62E-E5768EEFDF78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CD1C0D9-2E86-4A9E-B62E-E5768EEFDF78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD1C0D9-2E86-4A9E-B62E-E5768EEFDF78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CD1C0D9-2E86-4A9E-B62E-E5768EEFDF78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD1C0D9-2E86-4A9E-B62E-E5768EEFDF78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF17C4DC-5EA5-4F79-B77B-D95810C20CEA}
+	EndGlobalSection
+EndGlobal
