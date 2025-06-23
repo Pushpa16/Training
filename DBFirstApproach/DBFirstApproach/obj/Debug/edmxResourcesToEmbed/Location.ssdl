@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBFirstApproachModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Area">
+    <Key>
+      <PropertyRef Name="AreaId" />
+    </Key>
+    <Property Name="AreaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="CityId" Type="int" />
+    <Property Name="Pincode" Type="varchar" MaxLength="6" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__Area__CityId__267ABA7A">
+    <End Role="City" Type="Self.City" Multiplicity="0..1" />
+    <End Role="Area" Type="Self.Area" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityId" />
+      </Principal>
+      <Dependent Role="Area">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="DeleteArea" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="areaID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertArea" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="areaname" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="cityid" Type="int" Mode="In" />
+    <Parameter Name="pincode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SelectArea" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="UpdateArea" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="areaID" Type="int" Mode="In" />
+    <Parameter Name="areaname" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="cityid" Type="int" Mode="In" />
+    <Parameter Name="pincode" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="DBFirstApproachModelStoreContainer">
+    <EntitySet Name="Area" EntityType="Self.Area" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Area__CityId__267ABA7A" Association="Self.FK__Area__CityId__267ABA7A">
+      <End Role="City" EntitySet="City" />
+      <End Role="Area" EntitySet="Area" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

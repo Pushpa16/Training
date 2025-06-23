@@ -1,0 +1,12 @@
+C:\Users\pushpa.gond\source\repos\DBFirstApproach\DBFirstApproach\bin\Debug\DBFirstApproach.exe.config
+C:\Users\pushpa.gond\source\repos\DBFirstApproach\DBFirstApproach\bin\Debug\DBFirstApproach.exe
+C:\Users\pushpa.gond\source\repos\DBFirstApproach\DBFirstApproach\bin\Debug\DBFirstApproach.pdb
+C:\Users\pushpa.gond\source\repos\DBFirstApproach\DBFirstApproach\bin\Debug\EntityFramework.dll
+C:\Users\pushpa.gond\source\repos\DBFirstApproach\DBFirstApproach\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pushpa.gond\source\repos\DBFirstApproach\DBFirstApproach\bin\Debug\EntityFramework.xml
+C:\Users\pushpa.gond\source\repos\DBFirstApproach\DBFirstApproach\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pushpa.gond\source\repos\DBFirstApproach\DBFirstApproach\obj\Debug\DBFirstApproach.csproj.AssemblyReference.cache
+C:\Users\pushpa.gond\source\repos\DBFirstApproach\DBFirstApproach\obj\Debug\DBFirstApproach.csproj.CoreCompileInputs.cache
+C:\Users\pushpa.gond\source\repos\DBFirstApproach\DBFirstApproach\obj\Debug\DBFirstA.E3239A62.Up2Date
+C:\Users\pushpa.gond\source\repos\DBFirstApproach\DBFirstApproach\obj\Debug\DBFirstApproach.exe
+C:\Users\pushpa.gond\source\repos\DBFirstApproach\DBFirstApproach\obj\Debug\DBFirstApproach.pdb

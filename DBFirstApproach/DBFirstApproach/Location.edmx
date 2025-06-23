@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DBFirstApproachModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Area">
+          <Key>
+            <PropertyRef Name="AreaId" />
+          </Key>
+          <Property Name="AreaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="CityId" Type="int" />
+          <Property Name="Pincode" Type="varchar" MaxLength="6" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="CityId" />
+          </Key>
+          <Property Name="CityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK__Area__CityId__267ABA7A">
+          <End Role="City" Type="Self.City" Multiplicity="0..1" />
+          <End Role="Area" Type="Self.Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="Area">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="DeleteArea" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="areaID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="InsertArea" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="areaname" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cityid" Type="int" Mode="In" />
+          <Parameter Name="pincode" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SelectArea" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="UpdateArea" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="areaID" Type="int" Mode="In" />
+          <Parameter Name="areaname" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cityid" Type="int" Mode="In" />
+          <Parameter Name="pincode" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="DBFirstApproachModelStoreContainer">
+          <EntitySet Name="Area" EntityType="Self.Area" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Area__CityId__267ABA7A" Association="Self.FK__Area__CityId__267ABA7A">
+            <End Role="City" EntitySet="City" />
+            <End Role="Area" EntitySet="Area" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBFirstApproachModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Area">
+          <Key>
+            <PropertyRef Name="AreaId" />
+          </Key>
+          <Property Name="AreaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CityId" Type="Int32" />
+          <NavigationProperty Name="City" Relationship="Self.FK__Area__CityId__267ABA7A" FromRole="Area" ToRole="City" />
+          <Property Name="Pincode" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="CityId" />
+          </Key>
+          <Property Name="CityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Areas" Relationship="Self.FK__Area__CityId__267ABA7A" FromRole="City" ToRole="Area" />
+        </EntityType>
+        <Association Name="FK__Area__CityId__267ABA7A">
+          <End Role="City" Type="Self.City" Multiplicity="0..1" />
+          <End Role="Area" Type="Self.Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="Area">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DBFirstApproachEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Areas" EntityType="Self.Area" />
+          <EntitySet Name="Cities" EntityType="Self.City" />
+          <AssociationSet Name="FK__Area__CityId__267ABA7A" Association="Self.FK__Area__CityId__267ABA7A">
+            <End Role="City" EntitySet="Cities" />
+            <End Role="Area" EntitySet="Areas" />
+          </AssociationSet>
+          <FunctionImport Name="SelectArea" EntitySet="Areas" ReturnType="Collection(DBFirstApproachModel.Area)" />
+        </EntityContainer>
+        <ComplexType Name="SelectArea_Result">
+          <Property Type="Int32" Name="AreaId" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="CityId" Nullable="true" />
+          <Property Type="String" Name="Pincode" Nullable="true" MaxLength="6" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBFirstApproachModelStoreContainer" CdmEntityContainer="DBFirstApproachEntities1">
+          <EntitySetMapping Name="Areas">
+            <EntityTypeMapping TypeName="DBFirstApproachModel.Area">
+              <MappingFragment StoreEntitySet="Area">
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="DBFirstApproachModel.Area">
+              <ModificationFunctionMapping>
+                <InsertFunction FunctionName="DBFirstApproachModel.Store.InsertArea" >
+                  <ScalarProperty Name="Pincode" ParameterName="pincode" />
+                  <ScalarProperty Name="CityId" ParameterName="cityid" />
+                  <ScalarProperty Name="Name" ParameterName="areaname" />
+                </InsertFunction>
+                <UpdateFunction FunctionName="DBFirstApproachModel.Store.UpdateArea" >
+                  <ScalarProperty Name="Pincode" ParameterName="pincode" Version="Current" />
+                  <ScalarProperty Name="CityId" ParameterName="cityid" Version="Current" />
+                  <ScalarProperty Name="Name" ParameterName="areaname" Version="Current" />
+                  <ScalarProperty Name="AreaId" ParameterName="areaID" Version="Current" />
+                </UpdateFunction>
+                <DeleteFunction FunctionName="DBFirstApproachModel.Store.DeleteArea" >
+                  <ScalarProperty Name="AreaId" ParameterName="areaID" />
+                </DeleteFunction>
+              </ModificationFunctionMapping>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="DBFirstApproachModel.City">
+              <MappingFragment StoreEntitySet="City">
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SelectArea" FunctionName="DBFirstApproachModel.Store.SelectArea">
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

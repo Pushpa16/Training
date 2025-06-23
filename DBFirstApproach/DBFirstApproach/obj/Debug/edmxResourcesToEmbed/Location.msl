@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBFirstApproachModelStoreContainer" CdmEntityContainer="DBFirstApproachEntities1">
+    <EntitySetMapping Name="Areas">
+      <EntityTypeMapping TypeName="DBFirstApproachModel.Area">
+        <MappingFragment StoreEntitySet="Area">
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="DBFirstApproachModel.Area">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="DBFirstApproachModel.Store.InsertArea">
+            <ScalarProperty Name="Pincode" ParameterName="pincode" />
+            <ScalarProperty Name="CityId" ParameterName="cityid" />
+            <ScalarProperty Name="Name" ParameterName="areaname" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="DBFirstApproachModel.Store.UpdateArea">
+            <ScalarProperty Name="Pincode" ParameterName="pincode" Version="Current" />
+            <ScalarProperty Name="CityId" ParameterName="cityid" Version="Current" />
+            <ScalarProperty Name="Name" ParameterName="areaname" Version="Current" />
+            <ScalarProperty Name="AreaId" ParameterName="areaID" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="DBFirstApproachModel.Store.DeleteArea">
+            <ScalarProperty Name="AreaId" ParameterName="areaID" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="DBFirstApproachModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectArea" FunctionName="DBFirstApproachModel.Store.SelectArea" />
+  </EntityContainerMapping>
+</Mapping>
